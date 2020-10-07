@@ -10,7 +10,7 @@ function SpotifyToYoutube (spotifyApi) {
     }
 
     if (!options.raw) {
-      return (await spotifyToYoutube(urisOrIdsOrTracks, Object.assign({}, options, { raw: true }))).map(track => track.videoId)
+      return (await spotifyToYoutube(urisOrIdsOrTracks, Object.assign({}, options, { raw: true }))).map(track => track ? track.videoId : track)
     }
 
     if (typeof urisOrIdsOrTracks[0] === 'string') {
