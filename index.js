@@ -26,9 +26,13 @@ function SpotifyToYoutube (spotifyApi) {
     }
 
     return Promise.all(urisOrIdsOrTracks.map(async track => {
-      const { content } = await youtubeApi.search(`${track.artists.map(artist => artist.name).join(' ')} ${track.name}`)
+      let { content } = await youtubeApi.search(`${track.artists.map(artist => artist.name).join(' ')} ${track.name}`)
 
-      const songsAndVideos = content.filter(track => track.type === 'song' || track.type === 'video')
+      if (content.length < 1) {
+        content = (await youtubeApi.search(`${track.artists[0].name} ${track.name}`)).content
+      }
+
+      let songsAndVideos = content.filter(track => track.type === 'song' || track.type === 'video')
 
       if (songsAndVideos.length < 1) {
         return null
