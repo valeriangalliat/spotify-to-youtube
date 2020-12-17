@@ -1,6 +1,6 @@
 {
   "name": "spotify-to-youtube",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "You give a Spotify song, you get a YouTube song.",
   "homepage": "https://github.com/valeriangalliat/spotify-to-youtube",
   "bugs": "https://github.com/valeriangalliat/spotify-to-youtube/issues",
