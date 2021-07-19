@@ -13,7 +13,7 @@ I might tweak that logic without warning.
 
 ## Installation
 
-Note that this package depends an authenticated instance of
+Note that this package depends on an authenticated instance of
 [spotify-web-api-node] that you need to inject.
 
 [spotify-web-api-node]: https://github.com/thelinmichael/spotify-web-api-node
