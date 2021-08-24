@@ -14,12 +14,15 @@
     "url": "https://github.com/valeriangalliat/spotify-to-youtube.git"
   },
   "scripts": {
-    "lint": "standard"
+    "lint": "standard",
+    "test": "node test"
   },
   "dependencies": {
     "youtube-music-api": "^1.0.6"
   },
   "devDependencies": {
+    "spotify-buddylist": "^1.0.0",
+    "spotify-web-api-node": "^5.0.2",
     "standard": "^14.3.4"
   }
 }

@@ -60,3 +60,27 @@ Or even the whole track object as returned by the Spotify API, then the
 function won't need to make any call to the Spotify API.
 
 Also if you pass an array, it'll just work, and you'll get an array back.
+
+## Development
+
+To run the tests, you need to configure your [Spotify cookie](https://github.com/valeriangalliat/spotify-buddylist#sp_dc-cookie)
+in `config.test.json`.
+
+```sh
+cp config.test.sample.json config.test.json
+```
+
+Then edit `config.test.json` to add your `spDcCookie`.
+
+You can now run tests with:
+
+```sh
+npm test
+```
+
+**Note:** the tests hit the live servers, requests are not mocked. This
+means they're going to fail if YouTube returns different results, and
+will need to be updated accordingly.
+
+For example it seems that YouTube Music likes to re-upload songs on the
+same channel with the same title but a different ID. Go figure out why. 🤷

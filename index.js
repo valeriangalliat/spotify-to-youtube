@@ -32,7 +32,7 @@ function SpotifyToYoutube (spotifyApi) {
         content = (await youtubeApi.search(`${track.artists[0].name} ${track.name}`)).content
       }
 
-      let songsAndVideos = content.filter(track => track.type === 'song' || track.type === 'video')
+      const songsAndVideos = content.filter(track => track.type === 'song' || track.type === 'video')
 
       if (songsAndVideos.length < 1) {
         return null
