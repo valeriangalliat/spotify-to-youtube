@@ -17,7 +17,7 @@
     "lint": "standard"
   },
   "dependencies": {
-    "youtube-music-api": "github:valeriangalliat/youtube-music-api#update-search-parser"
+    "youtube-music-api": "^1.0.6"
   },
   "devDependencies": {
     "standard": "^14.3.4"
