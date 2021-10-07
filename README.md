@@ -28,20 +28,18 @@ npm install spotify-to-youtube spotify-web-api-node
 const SpotifyToYoutube = require('spotify-to-youtube')
 const SpotifyWebApi = require('spotify-web-api-node')
 
-// If you have API credentials
-const spotifyApi = new SpotifyWebApi({
-  clientId: '...',
-  clientSecret: '...',
-  redirectUri: '...'
-})
-
-// If you already have an access token
-const spotifyApi = new SpotifyWebApi()
-spotifyApi.setAccessToken('...')
-
-const spotifyToYoutube = SpotifyToYoutube(spotifyApi)
-
 async function main () {
+  const spotifyApi = new SpotifyWebApi({
+    clientId: '...',
+    clientSecret: '...'
+  })
+
+  const credsResponse = await spotifyApi.clientCredentialsGrant()
+
+  spotifyApi.setAccessToken(credsResponse.body['access_token'])
+
+  const spotifyToYoutube = SpotifyToYoutube(spotifyApi)
+
   const id = await spotifyToYoutube('spotify:track:3djNBlI7xOggg7pnsOLaNm')
   console.log(id) // J7_bMdYfSws
 }
