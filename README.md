@@ -1,4 +1,4 @@
-# Spotify to YouTube
+# Spotify to YouTube [![npm version](http://img.shields.io/npm/v/spotify-to-youtube.svg?style=flat-square)](https://www.npmjs.org/package/spotify-to-youtube)
 
 > You give a Spotify song, you get a YouTube song.
 
