@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "You give a Spotify song, you get a YouTube song.",
   "license": "Unlicense",
-  "author": "Val (http://val.codejam.info)",
+  "author": "Val (https://val.codejam.info)",
   "repository": "valeriangalliat/spotify-to-youtube",
   "scripts": {
     "lint": "standard",
